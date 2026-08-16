@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OlympusStaff Architecture & Case Study | Live Manga Platform | Rachid Oujil</title>
+  <meta name="description" content="Technical breakdown of OlympusStaff - Live production manga & comic publishing platform with VIP monetization, continuous reader, and anti-scraping defenses.">
+  <link rel="canonical" href="https://rachidoujil.me/projects/olympustaff.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="../index.html" class="brand-logo">
+        <img src="../assets/images/brand-logo.svg" alt="Rachid Oujil" class="brand-avatar" onerror="this.style.display='none'">
+        <span>Rachid Oujil</span>
+        <span class="brand-tag">SE</span>
+      </a>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="../about.html" class="nav-link">About</a></li>
+          <li><a href="../projects.html" class="nav-link active">Projects</a></li>
+          <li><a href="../skills.html" class="nav-link">Skills</a></li>
+          <li><a href="../education.html" class="nav-link">Education</a></li>
+          <li><a href="../blog.html" class="nav-link">Blog</a></li>
+          <li><a href="../contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Theme">
+          <span id="theme-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          </span>
+        </button>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="project-header-hero">
+      <div class="container">
+        <a href="../projects.html" class="btn btn-outline btn-sm" style="margin-bottom: 1.5rem;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+          Back to Projects Catalog
+        </a>
+        <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem;">
+          <span class="badge">Full-Stack</span>
+          <span class="badge badge-live">Live Production</span>
+        </div>
+        <h1 style="margin-bottom: 0.75rem;">OlympusStaff</h1>
+        <p style="font-size: 1.2rem; color: var(--text-secondary); max-width: 800px;">
+          High-traffic web manga and comic publishing platform with infinite scroll reader, VIP subscriptions, ad placement engine, and anti-scraping security.
+        </p>
+
+        <!-- Prominent Live Website Button -->
+        <div style="margin: 1.5rem 0;">
+          <a href="https://olympustaff.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg" style="box-shadow: 0 0 25px rgba(6, 182, 212, 0.4);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            Visit Live Platform (olympustaff.com)
+          </a>
+        </div>
+
+        <div class="project-meta-bar">
+          <div class="meta-item">
+            <span class="meta-item-label">Primary Stack</span>
+            <span class="meta-item-value">PHP 8.2, Laravel 12, Intervention Image 3.11, MySQL, Tailwind CSS, Vite</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-item-label">Production Status</span>
+            <span class="meta-item-value">Live at olympustaff.com</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-item-label">Database Entities</span>
+            <span class="meta-item-value">32 Migrations (Mangas, Chapters, VIP Plans, Reviews, Comments, Ads)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="project-detail-grid">
+        <div class="main-content">
+          <div class="detail-section">
+            <h2 class="detail-section-title">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent-cyan);"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+              Project Overview
+            </h2>
+            <p>
+              OlympusStaff is a high-concurrency content publishing and reading platform built for digital comics, manhwa, and manga enthusiasts. Operating in live production, it delivers an optimized continuous vertical reader, user bookmarking libraries, VIP tier chapter gating with proof verification, configurable ad placement zones, and an anti-scraping IP shield.
+            </p>
+          </div>
+
+          <div class="detail-section">
+            <h2 class="detail-section-title">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent-indigo);"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+              Problem & Solution
+            </h2>
+            <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+              <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem;">
+                <h4 style="color: var(--accent-rose); margin-bottom: 0.5rem;">The Challenge</h4>
+                <p style="font-size: 0.95rem;">
+                  Manga websites experience heavy bandwidth load from thousands of high-resolution chapter images, aggressive content scrapers stealing images, and the challenge of sustainably monetizing releases through subscription tiers.
+                </p>
+              </div>
+              <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem;">
+                <h4 style="color: var(--accent-emerald); margin-bottom: 0.5rem;">The Engineered Solution</h4>
+                <p style="font-size: 0.95rem;">
+                  OlympusStaff integrates Intervention Image v3 for automated WebP compression and chunked preloading, dynamic IP blacklisting and crawler detection (`BlockedIp`), and a VIP subscription verification workflow with configurable ad spaces (`AdPlacement`).
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Architecture -->
+          <div class="detail-section">
+            <h2 class="detail-section-title">System Architecture</h2>
+            <div class="architecture-box">
+              <div class="arch-flow">
+                <div class="arch-node highlight">
+                  <div class="arch-node-title">1. Fast Chapter Reader & Catalog UI</div>
+                  <div class="arch-node-desc">Blade + Tailwind CSS + Vanilla JS Â· Infinite Vertical Scroll Â· Bookmark Store</div>
+                </div>
+                <div class="arch-arrow">â†“</div>
+                <div class="arch-node">
+                  <div class="arch-node-title">2. Laravel 12 Application Layer & VIP Gating</div>
+                  <div class="arch-node-desc">Role & VIP Middleware Â· Proof Verification Pipeline Â· Ad Injector</div>
+                </div>
+                <div class="arch-arrow">â†“</div>
+                <div class="arch-node highlight">
+                  <div class="arch-node-title">3. Image Compression & Security Shield</div>
+                  <div class="arch-node-desc">Intervention Image 3.11 Pipeline Â· BlockedIp Anti-Bot Middleware</div>
+                </div>
+                <div class="arch-arrow">â†“</div>
+                <div class="arch-node">
+                  <div class="arch-node-title">4. MySQL Database Storage</div>
+                  <div class="arch-node-desc">32 Migrations (Mangas, Chapters, Pages, Genres, Reviews, Comments, Views)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="detail-section">
+            <h2 class="detail-section-title">Verified Technical Features</h2>
+            <ul class="feature-list">
+              <li class="feature-item">
+                <span class="feature-icon">âœ“</span>
+                <div class="feature-text"><strong>Continuous Vertical Reader:</strong> Smooth infinite scroll chapter reader with image preloading and reading position preservation.</div>
+              </li>
+              <li class="feature-item">
+                <span class="feature-icon">âœ“</span>
+                <div class="feature-text"><strong>VIP Subscription & Gating:</strong> Early-access chapter protection with manual and automated subscription payment proof verification (`SubscriptionProof`).</div>
+              </li>
+              <li class="feature-item">
+                <span class="feature-icon">âœ“</span>
+                <div class="feature-text"><strong>Dynamic Ad Placement Slots:</strong> Admin-controlled header, sidebar, and in-chapter interstitial advertising placements (`AdPlacement`).</div>
+              </li>
+              <li class="feature-item">
+                <span class="feature-icon">âœ“</span>
+                <div class="feature-text"><strong>Anti-Scraping Shield:</strong> IP blacklisting (`BlockedIp`), user suspension triggers, and anti-crawler heuristics.</div>
+              </li>
+              <li class="feature-item">
+                <span class="feature-icon">âœ“</span>
+                <div class="feature-text"><strong>Community & Social Features:</strong> Chapter review scores, user comments, bookmarks library, and view deduplication logging (`ViewLog`).</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <aside class="sidebar">
+          <div class="sidebar-widget">
+            <h3 class="widget-title">Technology Stack</h3>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+              <span class="badge badge-tech">PHP 8.2</span>
+              <span class="badge badge-tech">Laravel 12</span>
+              <span class="badge badge-tech">Intervention Image 3.11</span>
+              <span class="badge badge-tech">MySQL 8.0</span>
+              <span class="badge badge-tech">Tailwind CSS</span>
+              <span class="badge badge-tech">Vite</span>
+              <span class="badge badge-tech">Nginx</span>
+            </div>
+          </div>
+
+          <div class="sidebar-widget">
+            <h3 class="widget-title">Core Models</h3>
+            <div class="entity-list">
+              <span class="entity-chip">Manga</span>
+              <span class="entity-chip">Chapter</span>
+              <span class="entity-chip">Page</span>
+              <span class="entity-chip">Genre</span>
+              <span class="entity-chip">Plan</span>
+              <span class="entity-chip">SubscriptionProof</span>
+              <span class="entity-chip">Review</span>
+              <span class="entity-chip">Comment</span>
+              <span class="entity-chip">Favorite</span>
+              <span class="entity-chip">AdPlacement</span>
+              <span class="entity-chip">BlockedIp</span>
+              <span class="entity-chip">ViewLog</span>
+              <span class="entity-chip">User</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand-logo">
+            <img src="../assets/images/brand-logo.svg" alt="Rachid Oujil" class="brand-avatar" onerror="this.style.display='none'">
+            <span>Rachid Oujil</span>
+          </a>
+          <p>Software Engineer & Full-Stack Developer based in Morocco.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../projects.html">Projects</a></li>
+            <li><a href="../skills.html">Skills</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Production Links</h4>
+          <ul class="footer-links">
+            <li><a href="https://olympustaff.com/" target="_blank" rel="noopener noreferrer">OlympusStaff.com</a></li>
+            <li><a href="https://pinedramatiktok.com/" target="_blank" rel="noopener noreferrer">PineDramaTikTok.com</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Connect</h4>
+          <ul class="footer-links">
+            <li><a href="https://github.com/rachidoujil" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>Â© 2026 Rachid Oujil. All rights reserved. Hosted at <a href="https://rachidoujil.me">rachidoujil.me</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,318 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MailNox V1.0 Architecture & Case Study | Rachid Oujil</title>
+  <meta name="description" content="Technical case study and architecture breakdown of MailNox V1.0 - Enterprise high-deliverability email management, PowerMTA orchestration, and warmup engine.">
+  <link rel="canonical" href="https://rachidoujil.me/projects/mailnox.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container">
+      <a href="../index.html" class="brand-logo">
+        <img src="../assets/images/brand-logo.svg" alt="Rachid Oujil" class="brand-avatar" onerror="this.style.display='none'">
+        <span>Rachid Oujil</span>
+        <span class="brand-tag">SE</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="../about.html" class="nav-link">About</a></li>
+          <li><a href="../projects.html" class="nav-link active">Projects</a></li>
+          <li><a href="../skills.html" class="nav-link">Skills</a></li>
+          <li><a href="../education.html" class="nav-link">Education</a></li>
+          <li><a href="../blog.html" class="nav-link">Blog</a></li>
+          <li><a href="../contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Theme">
+          <span id="theme-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          </span>
+        </button>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Project Header Hero -->
+    <section class="project-header-hero">
+      <div class="container">
+        <a href="../projects.html" class="btn btn-outline btn-sm" style="margin-bottom: 1.5rem;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+          Back to Projects Catalog
+        </a>
+        <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem;">
+          <span class="badge">Full-Stack</span>
+          <span class="badge">Email Infrastructure</span>
+        </div>
+        <h1 style="margin-bottom: 0.75rem;">MailNox V1.0</h1>
+        <p style="font-size: 1.2rem; color: var(--text-secondary); max-width: 800px;">
+          Industrial-grade email delivery and MTA orchestration suite supporting PowerMTA, multi-provider API rotation, DNS validation, and tracking microservices.
+        </p>
+
+        <div class="project-meta-bar">
+          <div class="meta-item">
+            <span class="meta-item-label">Primary Stack</span>
+            <span class="meta-item-value">PHP 8.2, Laravel, MySQL, PowerMTA, Linux</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-item-label">System Type</span>
+            <span class="meta-item-value">Enterprise Infrastructure & MTA Orchestration</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-item-label">Domain Scope</span>
+            <span class="meta-item-value">Email Deliverability & Campaign Routing</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Detail Content Grid -->
+    <section class="container">
+      <div class="project-detail-grid">
+        <div class="main-content">
+          <!-- Overview -->
+          <div class="detail-section">
+            <h2 class="detail-section-title">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent-cyan);"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+              Project Overview
+            </h2>
+            <p>
+              MailNox is a full-stack email marketing and deliverability infrastructure platform. Designed to overcome the strict limitations of standard shared SMTP relays, it integrates directly with Linux-based PowerMTA (PMTA) servers, automates IP warmup ramps, orchestrates multi-account API routing (Google Workspace, Microsoft Graph, SMTP buckets), and tracks engagement metrics down to individual subscriber clicks and opens.
+            </p>
+          </div>
+
+          <!-- Problem & Solution -->
+          <div class="detail-section">
+            <h2 class="detail-section-title">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent-indigo);"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+              Problem & Solution
+            </h2>
+            <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+              <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem;">
+                <h4 style="color: var(--accent-rose); margin-bottom: 0.5rem;">The Challenge</h4>
+                <p style="font-size: 0.95rem;">
+                  High-volume transactional and marketing email delivery requires intricate MTA tuning, DNS verification (SPF, DKIM, DMARC), gradual IP reputation warming, suppression list scrubbing, and provider rate-limit handling. Standard off-the-shelf software rarely gives developers direct programmatic control over MTA daemons and multi-provider failover.
+                </p>
+              </div>
+              <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem;">
+                <h4 style="color: var(--accent-emerald); margin-bottom: 0.5rem;">The Engineered Solution</h4>
+                <p style="font-size: 0.95rem;">
+                  MailNox bridges the gap by coupling automated Linux PMTA configuration generators and queue dispatchers with a comprehensive web application. It automates daily IP warming volumes, executes A/B creative split testing, validates DNS records in real-time, and captures opens, clicks, and unsubscribes via high-speed microservices.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Architecture Flow -->
+          <div class="detail-section">
+            <h2 class="detail-section-title">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent-cyan);"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+              System Architecture
+            </h2>
+            <div class="architecture-box">
+              <div class="arch-flow">
+                <div class="arch-node highlight">
+                  <div class="arch-node-title">1. Web UI & Campaign Control Center</div>
+                  <div class="arch-node-desc">Blade + Tailwind Dashboard Â· Campaign Configurator Â· Split Test Studio Â· DNS Validator</div>
+                </div>
+                <div class="arch-arrow">â†“</div>
+                <div class="arch-node">
+                  <div class="arch-node-title">2. Laravel Application Core & Task Engine</div>
+                  <div class="arch-node-desc">IP Warmup Scheduler Â· Dynamic Task Dispatcher Â· Suppression List Scrubbing Engine</div>
+                </div>
+                <div class="arch-arrow">â†“</div>
+                <div class="arch-node highlight">
+                  <div class="arch-node-title">3. Multi-Provider Relay & MTA Daemon Layer</div>
+                  <div class="arch-node-desc">PowerMTA (PMTA) Daemon Â· Google Workspace API Â· MS Graph API Â· Custom SMTP Pools</div>
+                </div>
+                <div class="arch-arrow">â†“</div>
+                <div class="arch-node">
+                  <div class="arch-node-title">4. Tracking Microservices & Relational Storage</div>
+                  <div class="arch-node-desc">Pixel Webhooks Â· Unsubscribe Handlers Â· MySQL 8.0 Database (60+ Entities)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Real Features -->
+          <div class="detail-section">
+            <h2 class="detail-section-title">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent-cyan);"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+              Verified Technical Features
+            </h2>
+            <ul class="feature-list">
+              <li class="feature-item">
+                <span class="feature-icon">âœ“</span>
+                <div class="feature-text"><strong>PowerMTA Server Orchestration:</strong> Dynamic config generation, remote daemon installation scripts, proxy routing, and real-time delivery state monitoring.</div>
+              </li>
+              <li class="feature-item">
+                <span class="feature-icon">âœ“</span>
+                <div class="feature-text"><strong>Multi-Provider API Connectivity:</strong> Native API drivers for Google Workspace (Gmail API) and Microsoft Graph accounts alongside classic SMTP buckets.</div>
+              </li>
+              <li class="feature-item">
+                <span class="feature-icon">âœ“</span>
+                <div class="feature-text"><strong>Automated IP Warmup Schedules:</strong> Configurable daily ramp-up volumes, throttling thresholds, and automated pauses upon reputation degradation.</div>
+              </li>
+              <li class="feature-item">
+                <span class="feature-icon">âœ“</span>
+                <div class="feature-text"><strong>DNS Diagnostics & Validation:</strong> Real-time validation routines verifying SPF, DKIM, DMARC, MX, and custom tracking CNAME records.</div>
+              </li>
+              <li class="feature-item">
+                <span class="feature-icon">âœ“</span>
+                <div class="feature-text"><strong>Split Testing & Drip Automation:</strong> Multi-creative A/B campaign testing, conversion logging, and automated drip responder sequences.</div>
+              </li>
+              <li class="feature-item">
+                <span class="feature-icon">âœ“</span>
+                <div class="feature-text"><strong>Suppression & Blacklist Processing:</strong> Batch CSV comparison and automated scrubbing against global suppression lists and blacklist databases.</div>
+              </li>
+              <li class="feature-item">
+                <span class="feature-icon">âœ“</span>
+                <div class="feature-text"><strong>Deliverability & Geo-Analytics:</strong> Asynchronous open/click pixel tracking, user-agent parsing, ISP categorizations, and country-level mapping.</div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Challenges & Learnings -->
+          <div class="detail-section">
+            <h2 class="detail-section-title">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent-amber);"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+              Challenges & Engineering Insights
+            </h2>
+            <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.5rem; margin-bottom: 1.5rem;">
+              <h4 style="margin-bottom: 0.5rem; color: var(--text-primary);">Key Challenge</h4>
+              <p style="font-size: 0.95rem; color: var(--text-muted);">
+                Managing high-volume sending loops without hitting memory leaks or API provider rate-limits. This was solved by implementing chunked queue workers, adaptive exponential backoff algorithms, and decoupled webhook microservices for async tracking.
+              </p>
+            </div>
+            <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.5rem;">
+              <h4 style="margin-bottom: 0.5rem; color: var(--text-primary);">Technical Knowledge Gained</h4>
+              <p style="font-size: 0.95rem; color: var(--text-muted);">
+                Mastered low-level RFC 5322 specifications, SMTP handshake protocols, feedback loops (FBL), PowerMTA configuration directives, and high-throughput Redis/MySQL queue orchestration.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar Specifications -->
+        <aside class="sidebar">
+          <div class="sidebar-widget">
+            <h3 class="widget-title">Technology Stack</h3>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+              <span class="badge badge-tech">PHP 8.2</span>
+              <span class="badge badge-tech">Laravel Core</span>
+              <span class="badge badge-tech">MySQL 8.0</span>
+              <span class="badge badge-tech">PowerMTA (PMTA)</span>
+              <span class="badge badge-tech">Google Workspace API</span>
+              <span class="badge badge-tech">MS Graph API</span>
+              <span class="badge badge-tech">LaravelCollective</span>
+              <span class="badge badge-tech">GuzzleHttp</span>
+              <span class="badge badge-tech">Linux Bash</span>
+              <span class="badge badge-tech">Nginx</span>
+            </div>
+          </div>
+
+          <div class="sidebar-widget">
+            <h3 class="widget-title">Core Models (60+ Total)</h3>
+            <div class="entity-list">
+              <span class="entity-chip">DeliveryServer</span>
+              <span class="entity-chip">DynamicPmtaConfig</span>
+              <span class="entity-chip">SmtpBucket</span>
+              <span class="entity-chip">IpWarmup</span>
+              <span class="entity-chip">EmailCampaign</span>
+              <span class="entity-chip">EmailList</span>
+              <span class="entity-chip">EmailListSubscriber</span>
+              <span class="entity-chip">EmailCampaignTracking</span>
+              <span class="entity-chip">EmailCampaignConversion</span>
+              <span class="entity-chip">SplitTest</span>
+              <span class="entity-chip">AutoResponder</span>
+              <span class="entity-chip">DnsRecord</span>
+              <span class="entity-chip">Domain</span>
+              <span class="entity-chip">GoogleWorkspaceUser</span>
+              <span class="entity-chip">MicrosoftGraphAccount</span>
+              <span class="entity-chip">SuppressionProcess</span>
+              <span class="entity-chip">BlackList</span>
+              <span class="entity-chip">DeliverabilityStatistic</span>
+            </div>
+          </div>
+
+          <div class="sidebar-widget">
+            <h3 class="widget-title">Key Controllers</h3>
+            <div class="entity-list">
+              <span class="entity-chip">DeliveryServerController</span>
+              <span class="entity-chip">DynamicPmtaConfigController</span>
+              <span class="entity-chip">EmailCampaignController</span>
+              <span class="entity-chip">DeliverabilityStatisticController</span>
+              <span class="entity-chip">SuppressionProcessController</span>
+              <span class="entity-chip">SplitTestController</span>
+              <span class="entity-chip">GmailController</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand-logo">
+            <img src="../assets/images/brand-logo.svg" alt="Rachid Oujil" class="brand-avatar" onerror="this.style.display='none'">
+            <span>Rachid Oujil</span>
+          </a>
+          <p>Software Engineer & Full-Stack Developer based in Morocco.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../projects.html">Projects</a></li>
+            <li><a href="../skills.html">Skills</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">More Projects</h4>
+          <ul class="footer-links">
+            <li><a href="deutschio-platform.html">Deutschio Platform</a></li>
+            <li><a href="fldm-doctorat.html">FLDM Doctorat</a></li>
+            <li><a href="pharma-core.html">Pharma Core</a></li>
+            <li><a href="olympustaff.html">OlympusStaff</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Connect</h4>
+          <ul class="footer-links">
+            <li><a href="https://github.com/rachidoujil" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>Â© 2026 Rachid Oujil. All rights reserved.</span>
+        <span>Hosted at <a href="https://rachidoujil.me">rachidoujil.me</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
+

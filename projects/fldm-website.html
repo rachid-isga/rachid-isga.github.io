@@ -1,0 +1,195 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FLDM Institutional Website & Results Engine | Rachid Oujil</title>
+  <meta name="description" content="Technical case study of FLDM Website - Multilingual faculty web portal, student exam results query engine, and emergency traffic shutdown controls.">
+  <link rel="canonical" href="https://rachidoujil.me/projects/fldm-website.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="../index.html" class="brand-logo">
+        <img src="../assets/images/brand-logo.svg" alt="Rachid Oujil" class="brand-avatar" onerror="this.style.display='none'">
+        <span>Rachid Oujil</span>
+        <span class="brand-tag">SE</span>
+      </a>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="../about.html" class="nav-link">About</a></li>
+          <li><a href="../projects.html" class="nav-link active">Projects</a></li>
+          <li><a href="../skills.html" class="nav-link">Skills</a></li>
+          <li><a href="../education.html" class="nav-link">Education</a></li>
+          <li><a href="../blog.html" class="nav-link">Blog</a></li>
+          <li><a href="../contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Theme">
+          <span id="theme-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          </span>
+        </button>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="project-header-hero">
+      <div class="container">
+        <a href="../projects.html" class="btn btn-outline btn-sm" style="margin-bottom: 1.5rem;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+          Back to Projects Catalog
+        </a>
+        <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem;">
+          <span class="badge">Web</span>
+          <span class="badge">Institutional Portal</span>
+        </div>
+        <h1 style="margin-bottom: 0.75rem;">FLDM Institutional Website</h1>
+        <p style="font-size: 1.2rem; color: var(--text-secondary); max-width: 800px;">
+          Official faculty web portal featuring dynamic CMS, fast student exam results lookup, bilingual French/Arabic publishing, and emergency maintenance controls.
+        </p>
+
+        <div class="project-meta-bar">
+          <div class="meta-item">
+            <span class="meta-item-label">Primary Stack</span>
+            <span class="meta-item-value">PHP 8.2, Laravel 12, MySQL, Tailwind CSS, Blade, Vite</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-item-label">Database Entities</span>
+            <span class="meta-item-value">33 Migrations (News, Events, Programs, Results, Staff, Audits)</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-item-label">Special Controls</span>
+            <span class="meta-item-value">EmergencyShutdownController for High-Traffic Exam Peaks</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="project-detail-grid">
+        <div class="main-content">
+          <div class="detail-section">
+            <h2 class="detail-section-title">Project Overview</h2>
+            <p>
+              The FLDM Website serves as the central digital portal for the Faculty of Letters and Human Sciences Dhar El Mahraz. It provides dynamic content management for news, academic departments, and announcements, while delivering a high-speed exam results search engine and emergency load protection controllers.
+            </p>
+          </div>
+
+          <div class="detail-section">
+            <h2 class="detail-section-title">Verified Technical Features</h2>
+            <ul class="feature-list">
+              <li class="feature-item">
+                <span class="feature-icon">âœ“</span>
+                <div class="feature-text"><strong>Dynamic Institutional CMS:</strong> Administrative workflows for publishing university communiquÃ©s, academic programs, and conference announcements.</div>
+              </li>
+              <li class="feature-item">
+                <span class="feature-icon">âœ“</span>
+                <div class="feature-text"><strong>Exam Results Lookup Engine:</strong> High-performance search allowing students to query examination grades instantly via CNE/CIN codes (`ResultController`).</div>
+              </li>
+              <li class="feature-item">
+                <span class="feature-icon">âœ“</span>
+                <div class="feature-text"><strong>Bilingual Content Architecture:</strong> Native multilingual schema supporting both French and Arabic publishing.</div>
+              </li>
+              <li class="feature-item">
+                <span class="feature-icon">âœ“</span>
+                <div class="feature-text"><strong>Emergency Shutdown & Maintenance Mode:</strong> Dedicated controller (`EmergencyShutdownController`) to toggle read-only mode and cache results during traffic surges.</div>
+              </li>
+              <li class="feature-item">
+                <span class="feature-icon">âœ“</span>
+                <div class="feature-text"><strong>Faculty Directory:</strong> Structured profiles for faculty members, laboratory directors, and department heads.</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <aside class="sidebar">
+          <div class="sidebar-widget">
+            <h3 class="widget-title">Technology Stack</h3>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+              <span class="badge badge-tech">PHP 8.2</span>
+              <span class="badge badge-tech">Laravel 12</span>
+              <span class="badge badge-tech">MySQL</span>
+              <span class="badge badge-tech">Tailwind CSS</span>
+              <span class="badge badge-tech">Blade</span>
+              <span class="badge badge-tech">Vite</span>
+            </div>
+          </div>
+
+          <div class="sidebar-widget">
+            <h3 class="widget-title">Core Models</h3>
+            <div class="entity-list">
+              <span class="entity-chip">News</span>
+              <span class="entity-chip">Event</span>
+              <span class="entity-chip">Program</span>
+              <span class="entity-chip">Filiere</span>
+              <span class="entity-chip">DoctoratFormation</span>
+              <span class="entity-chip">DoctoratStructure</span>
+              <span class="entity-chip">FacultyMember</span>
+              <span class="entity-chip">ExamResult</span>
+              <span class="entity-chip">Schedule</span>
+              <span class="entity-chip">Page</span>
+              <span class="entity-chip">Audit</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand-logo">
+            <img src="../assets/images/brand-logo.svg" alt="Rachid Oujil" class="brand-avatar" onerror="this.style.display='none'">
+            <span>Rachid Oujil</span>
+          </a>
+          <p>Software Engineer & Full-Stack Developer based in Morocco.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../projects.html">Projects</a></li>
+            <li><a href="../skills.html">Skills</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Academic Suites</h4>
+          <ul class="footer-links">
+            <li><a href="fldm-doctorat.html">FLDM Doctorat</a></li>
+            <li><a href="fldm-master.html">FLDM Master</a></li>
+            <li><a href="fldm-scolarite.html">FLDM ScolaritÃ©</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Connect</h4>
+          <ul class="footer-links">
+            <li><a href="https://github.com/rachidoujil" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>Â© 2026 Rachid Oujil. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
+

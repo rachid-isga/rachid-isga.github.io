@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FLDM Gestion Doctorat Architecture & Case Study | Rachid Oujil</title>
+  <meta name="description" content="Technical breakdown of FLDM Gestion Doctorat - Doctoral academic lifecycle management, thesis topic allocation, supervisor matching, and Arabic DomPDF attestations.">
+  <link rel="canonical" href="https://rachidoujil.me/projects/fldm-doctorat.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="../index.html" class="brand-logo">
+        <img src="../assets/images/brand-logo.svg" alt="Rachid Oujil" class="brand-avatar" onerror="this.style.display='none'">
+        <span>Rachid Oujil</span>
+        <span class="brand-tag">SE</span>
+      </a>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="../about.html" class="nav-link">About</a></li>
+          <li><a href="../projects.html" class="nav-link active">Projects</a></li>
+          <li><a href="../skills.html" class="nav-link">Skills</a></li>
+          <li><a href="../education.html" class="nav-link">Education</a></li>
+          <li><a href="../blog.html" class="nav-link">Blog</a></li>
+          <li><a href="../contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Theme">
+          <span id="theme-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          </span>
+        </button>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="project-header-hero">
+      <div class="container">
+        <a href="../projects.html" class="btn btn-outline btn-sm" style="margin-bottom: 1.5rem;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+          Back to Projects Catalog
+        </a>
+        <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem;">
+          <span class="badge">Academic</span>
+          <span class="badge">Management System</span>
+        </div>
+        <h1 style="margin-bottom: 0.75rem;">FLDM Gestion Doctorat</h1>
+        <p style="font-size: 1.2rem; color: var(--text-secondary); max-width: 800px;">
+          Doctoral research management platform for USMBA Faculty of Letters & Human Sciences Dhar El Mahraz, managing candidate admissions, CED laboratory structures, thesis topics, and Arabic attestations.
+        </p>
+
+        <div class="project-meta-bar">
+          <div class="meta-item">
+            <span class="meta-item-label">Primary Stack</span>
+            <span class="meta-item-value">PHP 8.2, Laravel 12, ar-php, DomPDF, Maatwebsite Excel, MySQL</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-item-label">Special Features</span>
+            <span class="meta-item-value">Bilingual Arabic/French Typography & Excel Batch Importers</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-item-label">Target Users</span>
+            <span class="meta-item-value">CED Directorate, Research Laboratories, Doctoral Students & Supervisors</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="project-detail-grid">
+        <div class="main-content">
+          <div class="detail-section">
+            <h2 class="detail-section-title">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent-cyan);"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+              Project Overview
+            </h2>
+            <p>
+              FLDM Gestion Doctorat is an academic information system built for managing doctoral programs at the Faculty of Letters and Human Sciences Dhar El Mahraz (Sidi Mohamed Ben Abdellah University). It unifies candidate registration, supervisor (encadrant) assignment, doctoral study center (CED) formations, thesis topic (sujet) validation, and automated generation of official Moroccan academic certificates with bilingual Arabic/French support.
+            </p>
+          </div>
+
+          <div class="detail-section">
+            <h2 class="detail-section-title">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent-indigo);"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+              Problem & Solution
+            </h2>
+            <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+              <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem;">
+                <h4 style="color: var(--accent-rose); margin-bottom: 0.5rem;">The Challenge</h4>
+                <p style="font-size: 0.95rem;">
+                  Universities struggle with managing multi-year doctoral research milestones, tracking supervisor quotas, and generating official government attestations that require accurate bidirectional Arabic names and titles without character corruption.
+                </p>
+              </div>
+              <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem;">
+                <h4 style="color: var(--accent-emerald); margin-bottom: 0.5rem;">The Engineered Solution</h4>
+                <p style="font-size: 0.95rem;">
+                  The system maps the complete university research hierarchy (CED -> Structures -> Formations -> Sujets -> Etudiants), provides Maatwebsite Excel batch ingestion, and embeds Khaled.Alshamaa/ar-php with DomPDF for generating official Moroccan academic documents.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Architecture -->
+          <div class="detail-section">
+            <h2 class="detail-section-title">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent-cyan);"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+              System Architecture
+            </h2>
+            <div class="architecture-box">
+              <div class="arch-flow">
+                <div class="arch-node highlight">
+                  <div class="arch-node-title">1. University Secretariat & Registrar Portal</div>
+                  <div class="arch-node-desc">Blade + Tailwind CSS Â· Candidate Review Â· Supervisor Quota Monitoring</div>
+                </div>
+                <div class="arch-arrow">â†“</div>
+                <div class="arch-node">
+                  <div class="arch-node-title">2. Laravel 12 Academic Core Layer</div>
+                  <div class="arch-node-desc">Registration Workflows Â· Thesis Topic Allocator Â· Excel Batch Ingest Pipeline</div>
+                </div>
+                <div class="arch-arrow">â†“</div>
+                <div class="arch-node highlight">
+                  <div class="arch-node-title">3. Arabic Typography & PDF Attestation Engine</div>
+                  <div class="arch-node-desc">Khaled.Alshamaa/ar-php Text Shaper Â· DomPDF Bi-directional Layout Generator</div>
+                </div>
+                <div class="arch-arrow">â†“</div>
+                <div class="arch-node">
+                  <div class="arch-node-title">4. MySQL Database Storage</div>
+                  <div class="arch-node-desc">CEDs, Research Structures, Formations, Sujets, Encadrants, Inscriptions, Notes</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Features -->
+          <div class="detail-section">
+            <h2 class="detail-section-title">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent-cyan);"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+              Verified Technical Features
+            </h2>
+            <ul class="feature-list">
+              <li class="feature-item">
+                <span class="feature-icon">âœ“</span>
+                <div class="feature-text"><strong>Doctoral Lifecycle Management:</strong> Registration, annual re-enrollment, thesis progress tracking, and defense authorization.</div>
+              </li>
+              <li class="feature-item">
+                <span class="feature-icon">âœ“</span>
+                <div class="feature-text"><strong>Research Hierarchy Modeling:</strong> Mapping Doctoral Study Centers (CED), Laboratories, Doctoral Formations, and Research Topics.</div>
+              </li>
+              <li class="feature-item">
+                <span class="feature-icon">âœ“</span>
+                <div class="feature-text"><strong>Native Arabic Typography:</strong> Integrated `ar-php` for bidirectional glyph reshaping and RTL rendering on official university certificates.</div>
+              </li>
+              <li class="feature-item">
+                <span class="feature-icon">âœ“</span>
+                <div class="feature-text"><strong>Batch Excel Dossier Import:</strong> High-speed ingestion of student rosters, baccalaureate data, and academic transcripts with Maatwebsite Excel.</div>
+              </li>
+              <li class="feature-item">
+                <span class="feature-icon">âœ“</span>
+                <div class="feature-text"><strong>Attestation Dispatch Engine:</strong> Automated creation of registration attestations, supervisor certificates, and defense authorization dossiers.</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <aside class="sidebar">
+          <div class="sidebar-widget">
+            <h3 class="widget-title">Technology Stack</h3>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+              <span class="badge badge-tech">PHP 8.2</span>
+              <span class="badge badge-tech">Laravel 12</span>
+              <span class="badge badge-tech">ar-php 7.0</span>
+              <span class="badge badge-tech">Barryvdh DomPDF</span>
+              <span class="badge badge-tech">Maatwebsite Excel 3.1</span>
+              <span class="badge badge-tech">MySQL</span>
+              <span class="badge badge-tech">Tailwind CSS</span>
+              <span class="badge badge-tech">Vite</span>
+            </div>
+          </div>
+
+          <div class="sidebar-widget">
+            <h3 class="widget-title">Core Models</h3>
+            <div class="entity-list">
+              <span class="entity-chip">Etudiant</span>
+              <span class="entity-chip">Encadrant</span>
+              <span class="entity-chip">Sujet</span>
+              <span class="entity-chip">Inscription</span>
+              <span class="entity-chip">FormationDoctorale</span>
+              <span class="entity-chip">StructureRecherche</span>
+              <span class="entity-chip">Ced</span>
+              <span class="entity-chip">Etablissement</span>
+              <span class="entity-chip">Diplome</span>
+              <span class="entity-chip">Baccalaureat</span>
+              <span class="entity-chip">Note</span>
+              <span class="entity-chip">User</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand-logo">
+            <img src="../assets/images/brand-logo.svg" alt="Rachid Oujil" class="brand-avatar" onerror="this.style.display='none'">
+            <span>Rachid Oujil</span>
+          </a>
+          <p>Software Engineer & Full-Stack Developer based in Morocco.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../projects.html">Projects</a></li>
+            <li><a href="../education.html">Education</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Academic Suites</h4>
+          <ul class="footer-links">
+            <li><a href="fldm-master.html">FLDM Master Application</a></li>
+            <li><a href="fldm-scolarite.html">FLDM ScolaritÃ© Gestion</a></li>
+            <li><a href="fldm-website.html">FLDM Faculty Website</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Connect</h4>
+          <ul class="footer-links">
+            <li><a href="https://github.com/rachidoujil" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>Â© 2026 Rachid Oujil. All rights reserved. Hosted at <a href="https://rachidoujil.me">rachidoujil.me</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
+
